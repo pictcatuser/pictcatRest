@@ -10,3 +10,18 @@ web/bundles/*
 
 # Configuration files
 app/config/parameters.ini
+
+# Composer
+composer.phar
+
+# Testing QA
+build/*
+.sonar/*
+
+# MacOSX
+.DS_Store
+*~
+
+# Netbeans
+nbproject/*
+

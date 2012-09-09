@@ -1,0 +1,71 @@
+jms_security_extra:
+    secure_all_services: false
+    expressions: true
+
+security:
+    encoders:
+        # Encoder por defecto
+        Symfony\Component\Security\Core\User\User: plaintext
+        # FIN DEFECTO ---------------------------------
+        # Encoder para fos_user_bundle
+        FOS\UserBundle\Model\UserInterface: sha512
+
+    role_hierarchy:
+        # Roles por defecto, los comento
+        # ROLE_ADMIN:       ROLE_USER
+        #ROLE_SUPER_ADMIN: [ROLE_USER, ROLE_ADMIN, ROLE_ALLOWED_TO_SWITCH]
+                # FIN DEFECTO ---------------------------------
+        #Role fos_user_bundle
+        ROLE_ADMIN:       ROLE_USER
+        ROLE_SUPER_ADMIN: ROLE_ADMIN
+
+    providers:
+        # Provider por defecto, tendremos que quitarlos
+        in_memory:
+            memory:
+                users:
+                    user:  { password: userpass, roles: [ 'ROLE_USER' ] }
+                    admin: { password: adminpass, roles: [ 'ROLE_ADMIN' ] }
+        # FIN DEFECTO ---------------------------------
+        #Provider para fos_user_bundle
+        fos_userbundle:
+            id: fos_user.user_provider.username
+
+    firewalls:
+        # Firewalls por defecto
+        dev:
+            pattern:  ^/(_(profiler|wdt)|css|images|js)/
+            security: false
+
+        login:
+            pattern:  ^/demo/secured/login$
+            security: false
+
+        secured_area:
+            pattern:    ^/demo/secured/
+            form_login:
+                check_path: /demo/secured/login_check
+                login_path: /demo/secured/login
+            logout:
+                path:   /demo/secured/logout
+                target: /demo/
+            #anonymous: ~
+            #http_basic:
+            #    realm: "Secured Demo Area"
+        # FIN DEFECTO ---------------------------------    
+        # Firewalls para fos_user_bundle
+        main:
+            pattern: ^/
+            form_login:
+                provider: fos_userbundle
+                csrf_provider: form.csrf_provider
+            logout:       true
+            anonymous:    true
+
+    access_control:
+        #- { path: ^/login, roles: IS_AUTHENTICATED_ANONYMOUSLY, requires_channel: https }
+        #- { path: ^/_internal/secure, roles: IS_AUTHENTICATED_ANONYMOUSLY, ip: 127.0.0.1 }
+        - { path: ^/login$, role: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^/register, role: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^/resetting, role: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^/admin/, role: ROLE_ADMIN }
