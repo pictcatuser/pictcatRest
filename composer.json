@@ -18,7 +18,9 @@
         "sensio/generator-bundle": "2.1.*",
         "jms/security-extra-bundle": "1.2.*",
         "jms/di-extra-bundle": "1.1.*",
-        "friendsofsymfony/user-bundle": "*"
+        "jms/serializer-bundle": "dev-master",
+        "friendsofsymfony/user-bundle": "*",
+        "friendsofsymfony/rest-bundle": "*"
     },
     "scripts": {
         "post-install-cmd": [

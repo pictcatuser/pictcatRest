@@ -1,5 +1,5 @@
 {
-    "hash": "f976a60642a6123a1ee6a4a3131e1e07",
+    "hash": "8230e0f3f8fc71fa3b785994863d5555",
     "packages": [
         {
             "package": "doctrine/common",
@@ -32,6 +32,24 @@
             "commit-date": "1346869007"
         },
         {
+            "package": "friendsofsymfony/rest",
+            "version": "dev-master",
+            "alias-pretty-version": "0.7.x-dev",
+            "alias-version": "0.7.9999999.9999999-dev"
+        },
+        {
+            "package": "friendsofsymfony/rest",
+            "version": "dev-master",
+            "source-reference": "5ea703f5a3f5c7110cadeccb91b212c0eb7ea2d0",
+            "commit-date": "1339701893"
+        },
+        {
+            "package": "friendsofsymfony/rest-bundle",
+            "version": "dev-master",
+            "source-reference": "c91c61fc4523d1755e1948c803a14c705ed5fd24",
+            "commit-date": "1346970215"
+        },
+        {
             "package": "friendsofsymfony/user-bundle",
             "version": "dev-master",
             "source-reference": "24edb2f2e83b227a4ba24180c69758005e805991",
@@ -60,6 +78,18 @@
             "version": "1.2.x-dev",
             "source-reference": "9ab6aceda50fc7a2b07d741ba4b3f0695508afcb",
             "commit-date": "1346947943"
+        },
+        {
+            "package": "jms/serializer-bundle",
+            "version": "dev-master",
+            "alias-pretty-version": "0.9.x-dev",
+            "alias-version": "0.9.9999999.9999999-dev"
+        },
+        {
+            "package": "jms/serializer-bundle",
+            "version": "dev-master",
+            "source-reference": "5a9b7e6b62143950726f642da23d7eebf850e389",
+            "commit-date": "1346073949"
         },
         {
             "package": "kriswallsmith/assetic",
@@ -205,7 +235,7 @@
 
     ],
     "minimum-stability": "dev",
-    "stability-flags": [
-
-    ]
+    "stability-flags": {
+        "jms/serializer-bundle": 20
+    }
 }

@@ -1,3 +1,4 @@
-pct_core_user_homepage:
-    pattern:  /hello/{name}
-    defaults: { _controller: PCTCoreUserBundle:Default:index }
+users:
+    type:     rest
+    prefix: /api
+    resource: PCT\Core\UserBundle\Controller\UserController

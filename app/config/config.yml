@@ -22,6 +22,7 @@ framework:
 twig:
     debug:            %kernel.debug%
     strict_variables: %kernel.debug%
+    exception_controller: 'FOS\RestBundle\Controller\ExceptionController::showAction'
 
 # Assetic Configuration
 assetic:
@@ -64,3 +65,39 @@ fos_user:
     db_driver: orm # other valid values are 'mongodb', 'couchdb' and 'propel'
     firewall_name: main
     user_class: PCT\Core\UserBundle\Entity\User
+
+fos_rest:
+    view:
+        view_response_listener: force
+        failed_validation: HTTP_BAD_REQUEST
+        default_engine: twig
+        formats:
+            json: true
+            xml: true
+            rss: false
+        templating_formats:
+            html: true
+        force_redirects:
+            html: true
+    format_listener:
+        default_priorities: ['json', xml, html, '*/*']
+        fallback_format: json
+        prefer_extension: true
+    body_listener:
+        decoders:
+            json: fos_rest.decoder.json
+            xml: fos_rest.decoder.xml
+    param_fetcher_listener: force
+    allowed_methods_listener: true
+    exception:
+        codes:
+            'Symfony\Component\Routing\Exception\ResourceNotFoundException': 404
+            'Doctrine\ORM\OptimisticLockException': HTTP_CONFLICT
+        #messages:
+        #'Acme\HelloBundle\Exception\MyExceptionWithASafeMessage': true
+    routing_loader:
+        default_format: json
+    
+sensio_framework_extra:
+    view: { annotations: false }
+    router:  { annotations: true }
