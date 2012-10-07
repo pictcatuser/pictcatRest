@@ -1,5 +1,5 @@
 {
-    "hash": "1d7d5ddd7d19e429476a11f85a33773f",
+    "hash": "4c464595a4fc8a02e30e7fe7e016c699",
     "packages": [
         {
             "package": "dflydev/markdown",
@@ -36,6 +36,24 @@
             "commit-date": "1349460462"
         },
         {
+            "package": "friendsofsymfony/oauth-server-bundle",
+            "version": "dev-master",
+            "source-reference": "10f37570099292da5fb73b42d69b59961a27ebc6",
+            "commit-date": "1349391326"
+        },
+        {
+            "package": "friendsofsymfony/oauth2-php",
+            "version": "dev-master",
+            "alias-pretty-version": "1.0.x-dev",
+            "alias-version": "1.0.9999999.9999999-dev"
+        },
+        {
+            "package": "friendsofsymfony/oauth2-php",
+            "version": "dev-master",
+            "source-reference": "cd904a5b987fb881127818fe23999313330bb013",
+            "commit-date": "1348072369"
+        },
+        {
             "package": "friendsofsymfony/rest",
             "version": "dev-master",
             "alias-pretty-version": "0.8.x-dev",
@@ -46,12 +64,6 @@
             "version": "dev-master",
             "source-reference": "b48857315c39715245303fb5bbc1bab98026209e",
             "commit-date": "1347135166"
-        },
-        {
-            "package": "friendsofsymfony/rest-bundle",
-            "version": "dev-master",
-            "alias-pretty-version": "0.10.x-dev",
-            "alias-version": "0.10.9999999.9999999-dev"
         },
         {
             "package": "friendsofsymfony/rest-bundle",
@@ -226,6 +238,7 @@
         "sensio/generator-bundle": 20,
         "nelmio/api-doc-bundle": 20,
         "friendsofsymfony/user-bundle": 20,
-        "friendsofsymfony/rest-bundle": 20
+        "friendsofsymfony/rest-bundle": 20,
+        "friendsofsymfony/oauth-server-bundle": 20
     }
 }
