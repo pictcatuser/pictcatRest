@@ -7,21 +7,22 @@
     "require": {
         "php": ">=5.3.3",
         "symfony/symfony": "2.1.*",
-        "doctrine/orm": ">=2.2.3,<2.4-dev",
-        "doctrine/doctrine-bundle": "1.0.*",
-        "twig/extensions": "1.0.*",
-        "symfony/assetic-bundle": "2.1.*",
-        "symfony/swiftmailer-bundle": "2.1.*",
-        "symfony/monolog-bundle": "2.1.*",
-        "sensio/distribution-bundle": "2.1.*",
-        "sensio/framework-extra-bundle": "2.1.*",
-        "sensio/generator-bundle": "2.1.*",
-        "jms/security-extra-bundle": "1.2.*",
-        "jms/di-extra-bundle": "1.1.*",
-        "jms/serializer-bundle": "dev-master",
+        "doctrine/orm": "2.2.*",
+        "doctrine/doctrine-bundle": "dev-master",
+        "twig/extensions": "dev-master",
+        "symfony/assetic-bundle": "2.1.x-dev",
+        "symfony/swiftmailer-bundle": "2.1.x-dev",
+        "symfony/monolog-bundle": "2.1.x-dev",
+        "sensio/distribution-bundle": "2.1.x-dev",
+        "sensio/framework-extra-bundle": "2.1.x-dev",
+        "sensio/generator-bundle": "2.1.x-dev",
+        "jms/security-extra-bundle": "1.1.*",
+        "jms/di-extra-bundle": "1.0.*",
+        
+        "jms/serializer-bundle": "0.9.0",
         "nelmio/api-doc-bundle": "dev-master",
-        "friendsofsymfony/user-bundle": "*",
-        "friendsofsymfony/rest-bundle": "*"
+        "friendsofsymfony/user-bundle": "dev-master",
+        "friendsofsymfony/rest-bundle": "dev-master"
     },
     "scripts": {
         "post-install-cmd": [
