@@ -1,3 +1,19 @@
+pct_core_geo:
+    resource: "@PCTCoreGeoBundle/Resources/config/routing.yml"
+    prefix:   /
+
+pct_core_content:
+    resource: "@PCTCoreContentBundle/Resources/config/routing.yml"
+    prefix:   /
+
+pct_core_comment:
+    resource: "@PCTCoreCommentBundle/Resources/config/routing.yml"
+    prefix:   /
+
+pct_core_history:
+    resource: "@PCTCoreHistoryBundle/Resources/config/routing.yml"
+    prefix:   /
+
 pct_core_user:
     resource: "@PCTCoreUserBundle/Resources/config/routing.yml"
     prefix:   /
