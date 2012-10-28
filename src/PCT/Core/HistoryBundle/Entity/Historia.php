@@ -87,7 +87,7 @@ class Historia
     /**
      * @var Usuario
      *
-     * @ORM\ManyToOne(targetEntity="Usuario")
+     * @ORM\ManyToOne(targetEntity="PCT\Core\UserBundle\Entity\User")
      * @ORM\JoinColumns({
      *   @ORM\JoinColumn(name="id_usuario", referencedColumnName="id")
      * })
@@ -97,7 +97,7 @@ class Historia
     /**
      * @var Zona
      *
-     * @ORM\ManyToOne(targetEntity="Zona")
+     * @ORM\ManyToOne(targetEntity="PCT\Core\GeoBundle\Entity\Zona")
      * @ORM\JoinColumns({
      *   @ORM\JoinColumn(name="id_zona", referencedColumnName="id")
      * })
@@ -109,7 +109,7 @@ class Historia
     /**
      * Get id
      *
-     * @return integer 
+     * @return integer
      */
     public function getId()
     {
@@ -131,7 +131,7 @@ class Historia
     /**
      * Get titulo
      *
-     * @return string 
+     * @return string
      */
     public function getTitulo()
     {
@@ -153,7 +153,7 @@ class Historia
     /**
      * Get descripcion
      *
-     * @return text 
+     * @return text
      */
     public function getDescripcion()
     {
@@ -175,7 +175,7 @@ class Historia
     /**
      * Get fechaCreacion
      *
-     * @return date 
+     * @return date
      */
     public function getFechaCreacion()
     {
@@ -197,7 +197,7 @@ class Historia
     /**
      * Get horaCreacion
      *
-     * @return time 
+     * @return time
      */
     public function getHoraCreacion()
     {
@@ -219,7 +219,7 @@ class Historia
     /**
      * Get estado
      *
-     * @return boolean 
+     * @return boolean
      */
     public function getEstado()
     {
@@ -241,7 +241,7 @@ class Historia
     /**
      * Get latitud
      *
-     * @return decimal 
+     * @return decimal
      */
     public function getLatitud()
     {
@@ -263,7 +263,7 @@ class Historia
     /**
      * Get longitud
      *
-     * @return decimal 
+     * @return decimal
      */
     public function getLongitud()
     {
@@ -285,7 +285,7 @@ class Historia
     /**
      * Get radio
      *
-     * @return boolean 
+     * @return boolean
      */
     public function getRadio()
     {
@@ -307,7 +307,7 @@ class Historia
     /**
      * Get idioma
      *
-     * @return string 
+     * @return string
      */
     public function getIdioma()
     {
@@ -329,7 +329,7 @@ class Historia
     /**
      * Get idUsuario
      *
-     * @return PCT\Core\HistoryBundle\Entity\Usuario 
+     * @return PCT\Core\HistoryBundle\Entity\Usuario
      */
     public function getIdUsuario()
     {
@@ -351,7 +351,7 @@ class Historia
     /**
      * Get idZona
      *
-     * @return PCT\Core\HistoryBundle\Entity\Zona 
+     * @return PCT\Core\HistoryBundle\Entity\Zona
      */
     public function getIdZona()
     {
