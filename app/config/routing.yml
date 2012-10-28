@@ -1,22 +1,22 @@
 pct_core_geo:
     resource: "@PCTCoreGeoBundle/Resources/config/routing.yml"
-    prefix:   /
+    prefix:   /api/geo
 
 pct_core_content:
     resource: "@PCTCoreContentBundle/Resources/config/routing.yml"
-    prefix:   /
+    prefix:   /api/content
 
 pct_core_comment:
     resource: "@PCTCoreCommentBundle/Resources/config/routing.yml"
-    prefix:   /
+    prefix:   /api/comment
 
 pct_core_history:
     resource: "@PCTCoreHistoryBundle/Resources/config/routing.yml"
-    prefix:   /
+    prefix:   /api/history
 
 pct_core_user:
     resource: "@PCTCoreUserBundle/Resources/config/routing.yml"
-    prefix:   /
+    prefix:   /api/user
 
 NelmioApiDocBundle:
     resource: "@NelmioApiDocBundle/Resources/config/routing.yml"
