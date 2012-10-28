@@ -3,6 +3,8 @@
 namespace PCT\Core\HistoryBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use PCT\Core\GeoBundle\Entity\Zona;
+use PCT\Core\UserBundle\Entity\User;
 
 /**
  * PCT\Core\HistoryBundle\Entity\Historia
@@ -12,6 +14,7 @@ use Doctrine\ORM\Mapping as ORM;
  */
 class Historia
 {
+
     /**
      * @var integer $id
      *
@@ -103,8 +106,6 @@ class Historia
      * })
      */
     private $idZona;
-
-
 
     /**
      * Get id
@@ -317,10 +318,10 @@ class Historia
     /**
      * Set idUsuario
      *
-     * @param PCT\Core\HistoryBundle\Entity\Usuario $idUsuario
+     * @param PCT\Core\UserBundle\Entity\User $idUsuario
      * @return Historia
      */
-    public function setIdUsuario(\PCT\Core\HistoryBundle\Entity\Usuario $idUsuario = null)
+    public function setIdUsuario(\PCT\Core\UserBundle\Entity\User $idUsuario = null)
     {
         $this->idUsuario = $idUsuario;
         return $this;
@@ -329,7 +330,7 @@ class Historia
     /**
      * Get idUsuario
      *
-     * @return PCT\Core\HistoryBundle\Entity\Usuario
+     * @return PCT\Core\UserBundle\Entity\User
      */
     public function getIdUsuario()
     {
@@ -339,10 +340,10 @@ class Historia
     /**
      * Set idZona
      *
-     * @param PCT\Core\HistoryBundle\Entity\Zona $idZona
+     * @param PCT\Core\GeoBundle\Entity\Zona $idZona
      * @return Historia
      */
-    public function setIdZona(\PCT\Core\HistoryBundle\Entity\Zona $idZona = null)
+    public function setIdZona(\PCT\Core\GeoBundle\Entity\Zona $idZona = null)
     {
         $this->idZona = $idZona;
         return $this;
@@ -351,10 +352,11 @@ class Historia
     /**
      * Get idZona
      *
-     * @return PCT\Core\HistoryBundle\Entity\Zona
+     * @return PCT\Core\GeoBundle\Entity\Zona
      */
     public function getIdZona()
     {
         return $this->idZona;
     }
+
 }

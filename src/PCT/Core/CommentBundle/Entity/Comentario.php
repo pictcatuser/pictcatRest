@@ -3,6 +3,7 @@
 namespace PCT\Core\CommentBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use PCT\Core\UserBundle\Entity\User;
 
 /**
  * PCT\Core\CommentBundle\Entity\Comentario
@@ -74,9 +75,9 @@ class Comentario
     private $idContenido;
 
     /**
-     * @var Usuario
+     * @var PCT\Core\UserBundle\Entity\User $idUsuario
      *
-     * @ORM\ManyToOne(targetEntity="Usuario")
+     * @ORM\ManyToOne(targetEntity="PCT\Core\UserBundle\Entity\User")
      * @ORM\JoinColumns({
      *   @ORM\JoinColumn(name="id_usuario", referencedColumnName="id")
      * })
@@ -88,7 +89,7 @@ class Comentario
     /**
      * Get id
      *
-     * @return integer 
+     * @return integer
      */
     public function getId()
     {
@@ -110,7 +111,7 @@ class Comentario
     /**
      * Get fechaCreacion
      *
-     * @return date 
+     * @return date
      */
     public function getFechaCreacion()
     {
@@ -132,7 +133,7 @@ class Comentario
     /**
      * Get horaCreacion
      *
-     * @return time 
+     * @return time
      */
     public function getHoraCreacion()
     {
@@ -154,7 +155,7 @@ class Comentario
     /**
      * Get fechaEdicion
      *
-     * @return date 
+     * @return date
      */
     public function getFechaEdicion()
     {
@@ -176,7 +177,7 @@ class Comentario
     /**
      * Get horaEdicion
      *
-     * @return time 
+     * @return time
      */
     public function getHoraEdicion()
     {
@@ -198,7 +199,7 @@ class Comentario
     /**
      * Get orden
      *
-     * @return integer 
+     * @return integer
      */
     public function getOrden()
     {
@@ -220,7 +221,7 @@ class Comentario
     /**
      * Get texto
      *
-     * @return text 
+     * @return text
      */
     public function getTexto()
     {
@@ -242,7 +243,7 @@ class Comentario
     /**
      * Get idContenido
      *
-     * @return PCT\Core\CommentBundle\Entity\Contenido 
+     * @return PCT\Core\CommentBundle\Entity\Contenido
      */
     public function getIdContenido()
     {
@@ -252,10 +253,10 @@ class Comentario
     /**
      * Set idUsuario
      *
-     * @param PCT\Core\CommentBundle\Entity\Usuario $idUsuario
+     * @param PCT\Core\UserBundle\Entity\User $idUsuario
      * @return Comentario
      */
-    public function setIdUsuario(\PCT\Core\CommentBundle\Entity\Usuario $idUsuario = null)
+    public function setIdUsuario(\PCT\Core\UserBundle\Entity\User $idUsuario = null)
     {
         $this->idUsuario = $idUsuario;
         return $this;
@@ -264,7 +265,7 @@ class Comentario
     /**
      * Get idUsuario
      *
-     * @return PCT\Core\CommentBundle\Entity\Usuario 
+     * @return PCT\Core\UserBundle\Entity\User
      */
     public function getIdUsuario()
     {

@@ -3,6 +3,7 @@
 namespace PCT\Core\CommentBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use PCT\Core\UserBundle\Entity\User;
 
 /**
  * PCT\Core\CommentBundle\Entity\VotoComentario
@@ -29,9 +30,9 @@ class VotoComentario
     private $valor;
 
     /**
-     * @var Usuario
+     * @var PCT\Core\UserBundle\Entity\User $idUsuario
      *
-     * @ORM\ManyToOne(targetEntity="Usuario")
+     * @ORM\ManyToOne(targetEntity="PCT\Core\UserBundle\Entity\User")
      * @ORM\JoinColumns({
      *   @ORM\JoinColumn(name="id_usuario", referencedColumnName="id")
      * })
@@ -53,7 +54,7 @@ class VotoComentario
     /**
      * Get id
      *
-     * @return integer 
+     * @return integer
      */
     public function getId()
     {
@@ -75,7 +76,7 @@ class VotoComentario
     /**
      * Get valor
      *
-     * @return boolean 
+     * @return boolean
      */
     public function getValor()
     {
@@ -85,10 +86,10 @@ class VotoComentario
     /**
      * Set idUsuario
      *
-     * @param PCT\Core\CommentBundle\Entity\Usuario $idUsuario
+     * @param PCT\Core\UserBundle\Entity\User $idUsuario
      * @return VotoComentario
      */
-    public function setIdUsuario(\PCT\Core\CommentBundle\Entity\Usuario $idUsuario = null)
+    public function setIdUsuario(\PCT\Core\UserBundle\Entity\User $idUsuario = null)
     {
         $this->idUsuario = $idUsuario;
         return $this;
@@ -97,7 +98,7 @@ class VotoComentario
     /**
      * Get idUsuario
      *
-     * @return PCT\Core\CommentBundle\Entity\Usuario 
+     * @return PCT\Core\UserBundle\Entity\User
      */
     public function getIdUsuario()
     {
@@ -119,7 +120,7 @@ class VotoComentario
     /**
      * Get idComentario
      *
-     * @return PCT\Core\CommentBundle\Entity\Comentario 
+     * @return PCT\Core\CommentBundle\Entity\Comentario
      */
     public function getIdComentario()
     {

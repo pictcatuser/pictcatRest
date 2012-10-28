@@ -3,6 +3,8 @@
 namespace PCT\Core\ContentBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use PCT\Core\UserBundle\Entity\User;
+use PCT\Core\HistoryBundle\Entity\Historia;
 
 /**
  * PCT\Core\ContentBundle\Entity\Contenido
@@ -12,6 +14,7 @@ use Doctrine\ORM\Mapping as ORM;
  */
 class Contenido
 {
+
     /**
      * @var integer $id
      *
@@ -43,9 +46,9 @@ class Contenido
     private $horaCreacion;
 
     /**
-     * @var Historia
+     * @var PCT\Core\HistoryBundle\Entity\Historia $idHistoria
      *
-     * @ORM\ManyToOne(targetEntity="Historia")
+     * @ORM\ManyToOne(targetEntity="PCT\Core\HistoryBundle\Entity\Historia")
      * @ORM\JoinColumns({
      *   @ORM\JoinColumn(name="id_historia", referencedColumnName="id")
      * })
@@ -53,21 +56,19 @@ class Contenido
     private $idHistoria;
 
     /**
-     * @var Usuario
+     * @var PCT\Core\UserBundle\Entity\User $idUsuario
      *
-     * @ORM\ManyToOne(targetEntity="Usuario")
+     * @ORM\ManyToOne(targetEntity="PCT\Core\UserBundle\Entity\User")
      * @ORM\JoinColumns({
      *   @ORM\JoinColumn(name="id_usuario", referencedColumnName="id")
      * })
      */
     private $idUsuario;
 
-
-
     /**
      * Get id
      *
-     * @return integer 
+     * @return integer
      */
     public function getId()
     {
@@ -89,7 +90,7 @@ class Contenido
     /**
      * Get tipo
      *
-     * @return boolean 
+     * @return boolean
      */
     public function getTipo()
     {
@@ -111,7 +112,7 @@ class Contenido
     /**
      * Get fechaCreacion
      *
-     * @return date 
+     * @return date
      */
     public function getFechaCreacion()
     {
@@ -133,7 +134,7 @@ class Contenido
     /**
      * Get horaCreacion
      *
-     * @return time 
+     * @return time
      */
     public function getHoraCreacion()
     {
@@ -143,10 +144,10 @@ class Contenido
     /**
      * Set idHistoria
      *
-     * @param PCT\Core\ContentBundle\Entity\Historia $idHistoria
+     * @param PCT\Core\HistoryBundle\Entity\Historia $idHistoria
      * @return Contenido
      */
-    public function setIdHistoria(\PCT\Core\ContentBundle\Entity\Historia $idHistoria = null)
+    public function setIdHistoria(\PCT\Core\HistoryBundle\Entity\Historia $idHistoria = null)
     {
         $this->idHistoria = $idHistoria;
         return $this;
@@ -155,7 +156,7 @@ class Contenido
     /**
      * Get idHistoria
      *
-     * @return PCT\Core\ContentBundle\Entity\Historia 
+     * @return PCT\Core\HistoryBundle\Entity\Historia
      */
     public function getIdHistoria()
     {
@@ -165,10 +166,10 @@ class Contenido
     /**
      * Set idUsuario
      *
-     * @param PCT\Core\ContentBundle\Entity\Usuario $idUsuario
+     * @param PCT\Core\UserBundle\Entity\User $idUsuario
      * @return Contenido
      */
-    public function setIdUsuario(\PCT\Core\ContentBundle\Entity\Usuario $idUsuario = null)
+    public function setIdUsuario(\PCT\Core\UserBundle\Entity\User $idUsuario = null)
     {
         $this->idUsuario = $idUsuario;
         return $this;
@@ -177,10 +178,11 @@ class Contenido
     /**
      * Get idUsuario
      *
-     * @return PCT\Core\ContentBundle\Entity\Usuario 
+     * @return PCT\Core\UserBundle\Entity\User
      */
     public function getIdUsuario()
     {
         return $this->idUsuario;
     }
+
 }

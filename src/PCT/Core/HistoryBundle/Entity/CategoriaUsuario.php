@@ -3,6 +3,7 @@
 namespace PCT\Core\HistoryBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use PCT\Core\UserBundle\Entity\User;
 
 /**
  * PCT\Core\HistoryBundle\Entity\CategoriaUsuario
@@ -29,9 +30,9 @@ class CategoriaUsuario
     private $valor;
 
     /**
-     * @var Usuario
+     * @var PCT\Core\UserBundle\Entity\User $idUsuario
      *
-     * @ORM\ManyToOne(targetEntity="Usuario")
+     * @ORM\ManyToOne(targetEntity="PCT\Core\UserBundle\Entity\User")
      * @ORM\JoinColumns({
      *   @ORM\JoinColumn(name="id_usuario", referencedColumnName="id")
      * })
@@ -53,7 +54,7 @@ class CategoriaUsuario
     /**
      * Get id
      *
-     * @return integer 
+     * @return integer
      */
     public function getId()
     {
@@ -75,7 +76,7 @@ class CategoriaUsuario
     /**
      * Get valor
      *
-     * @return boolean 
+     * @return boolean
      */
     public function getValor()
     {
@@ -85,10 +86,10 @@ class CategoriaUsuario
     /**
      * Set idUsuario
      *
-     * @param PCT\Core\HistoryBundle\Entity\Usuario $idUsuario
+     * @param PCT\Core\UserBundle\Entity\User $idUsuario
      * @return CategoriaUsuario
      */
-    public function setIdUsuario(\PCT\Core\HistoryBundle\Entity\Usuario $idUsuario = null)
+    public function setIdUsuario(\PCT\Core\UserBundle\Entity\User $idUsuario = null)
     {
         $this->idUsuario = $idUsuario;
         return $this;
@@ -97,7 +98,7 @@ class CategoriaUsuario
     /**
      * Get idUsuario
      *
-     * @return PCT\Core\HistoryBundle\Entity\Usuario 
+     * @return PCT\Core\UserBundle\Entity\User
      */
     public function getIdUsuario()
     {
@@ -119,7 +120,7 @@ class CategoriaUsuario
     /**
      * Get idCategoria
      *
-     * @return PCT\Core\HistoryBundle\Entity\Categoria 
+     * @return PCT\Core\HistoryBundle\Entity\Categoria
      */
     public function getIdCategoria()
     {

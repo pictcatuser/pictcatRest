@@ -3,6 +3,7 @@
 namespace PCT\Core\GeoBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use PCT\Core\UserBundle\Entity\User;
 
 /**
  * PCT\Core\GeoBundle\Entity\UsuarioZona
@@ -22,9 +23,9 @@ class UsuarioZona
     private $id;
 
     /**
-     * @var Usuario
+     * @var PCT\Core\UserBundle\Entity\User $idUsuario
      *
-     * @ORM\ManyToOne(targetEntity="Usuario")
+     * @ORM\ManyToOne(targetEntity="PCT\Core\UserBundle\Entity\User")
      * @ORM\JoinColumns({
      *   @ORM\JoinColumn(name="id_usuario", referencedColumnName="id")
      * })
@@ -46,7 +47,7 @@ class UsuarioZona
     /**
      * Get id
      *
-     * @return integer 
+     * @return integer
      */
     public function getId()
     {
@@ -56,10 +57,10 @@ class UsuarioZona
     /**
      * Set idUsuario
      *
-     * @param PCT\Core\GeoBundle\Entity\Usuario $idUsuario
+     * @param PCT\Core\UserBundle\Entity\User $idUsuario
      * @return UsuarioZona
      */
-    public function setIdUsuario(\PCT\Core\GeoBundle\Entity\Usuario $idUsuario = null)
+    public function setIdUsuario(\PCT\Core\UserBundle\Entity\User $idUsuario = null)
     {
         $this->idUsuario = $idUsuario;
         return $this;
@@ -68,7 +69,7 @@ class UsuarioZona
     /**
      * Get idUsuario
      *
-     * @return PCT\Core\GeoBundle\Entity\Usuario 
+     * @return PCT\Core\UserBundle\Entity\User
      */
     public function getIdUsuario()
     {
@@ -90,7 +91,7 @@ class UsuarioZona
     /**
      * Get idZona
      *
-     * @return PCT\Core\GeoBundle\Entity\Zona 
+     * @return PCT\Core\GeoBundle\Entity\Zona
      */
     public function getIdZona()
     {

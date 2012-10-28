@@ -3,6 +3,7 @@
 namespace PCT\Core\ContentBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use PCT\Core\UserBundle\Entity\User;
 
 /**
  * PCT\Core\ContentBundle\Entity\VotoContenido
@@ -43,9 +44,9 @@ class VotoContenido
     private $hora;
 
     /**
-     * @var Usuario
+     * @var PCT\Core\UserBundle\Entity\User $idUsuario
      *
-     * @ORM\ManyToOne(targetEntity="Usuario")
+     * @ORM\ManyToOne(targetEntity="PCT\Core\UserBundle\Entity\User")
      * @ORM\JoinColumns({
      *   @ORM\JoinColumn(name="id_usuario", referencedColumnName="id")
      * })
@@ -67,7 +68,7 @@ class VotoContenido
     /**
      * Get id
      *
-     * @return integer 
+     * @return integer
      */
     public function getId()
     {
@@ -89,7 +90,7 @@ class VotoContenido
     /**
      * Get valor
      *
-     * @return boolean 
+     * @return boolean
      */
     public function getValor()
     {
@@ -111,7 +112,7 @@ class VotoContenido
     /**
      * Get fecha
      *
-     * @return date 
+     * @return date
      */
     public function getFecha()
     {
@@ -133,7 +134,7 @@ class VotoContenido
     /**
      * Get hora
      *
-     * @return time 
+     * @return time
      */
     public function getHora()
     {
@@ -143,10 +144,10 @@ class VotoContenido
     /**
      * Set idUsuario
      *
-     * @param PCT\Core\ContentBundle\Entity\Usuario $idUsuario
+     * @param PCT\Core\UserBundle\Entity\User $idUsuario
      * @return VotoContenido
      */
-    public function setIdUsuario(\PCT\Core\ContentBundle\Entity\Usuario $idUsuario = null)
+    public function setIdUsuario(\PCT\Core\UserBundle\Entity\User $idUsuario = null)
     {
         $this->idUsuario = $idUsuario;
         return $this;
@@ -155,7 +156,7 @@ class VotoContenido
     /**
      * Get idUsuario
      *
-     * @return PCT\Core\ContentBundle\Entity\Usuario 
+     * @return PCT\Core\UserBundle\Entity\User
      */
     public function getIdUsuario()
     {
@@ -177,7 +178,7 @@ class VotoContenido
     /**
      * Get idContenido
      *
-     * @return PCT\Core\ContentBundle\Entity\Contenido 
+     * @return PCT\Core\ContentBundle\Entity\Contenido
      */
     public function getIdContenido()
     {
