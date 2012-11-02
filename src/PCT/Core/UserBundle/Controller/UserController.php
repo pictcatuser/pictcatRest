@@ -14,12 +14,12 @@ use FOS\RestBundle\Controller\Annotations\RequestParam;
  * Description of UserController
  *
  * @author quique
- * 
- * 
+ *
+ *
  */
 class UserController extends Controller {
     /**
-     * 
+     *
      * Will look for a page query parameter, ie. ?page=XX
      * If not passed it will be automatically be set to the default of "1"
      * If passed but doesn't match the requirement "\d+" it will be also be set to the default of "1"
@@ -38,31 +38,31 @@ class UserController extends Controller {
      * HARE OTRO METODO POSTA PARA DIFERENCIARLO
      * (LE HE QUITADO LA @ PARA QUE NO PETE)
      * RequestParam(name="firstname", requirements="[a-z]+", description="Firstname.")
-     * 
+     *
      * @param ParamFetcher $paramFetcher
-     * 
+     *
      * @return FOSView
-     * 
-     * @ApiDoc() 
+     *
+     * @ApiDoc()
      */
     public function getUsersAction(ParamFetcher $paramFetcher) {
-    
+
         $page = $paramFetcher->get('page');
-                
+
         $view = View::create();
-        
+
         // Array ejemplo
-        if ($page==1) {$data = ["A" => $page];}
-        else {$data = ["A"=>"HOLA REST","B"=>"HOLA"];};
-        
+        if ($page==1) {$data = array("A" => $page);}
+        else {$data = array("A"=>"HOLA REST","B"=>"HOLA");};
+
         $view->setStatusCode(200)->setData($data);
-        
+
         // En el caso de que devolvamos un html
         $view->setTemplate("PCTCoreUserBundle:Default:user.html.twig", array("data" => "a"));
-        
+
         // Para lanzar excepciones
         //throw new HttpException(400, "New comment is not valid.");
-        
+
         return $view;
     }
 }

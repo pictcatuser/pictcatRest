@@ -2,9 +2,9 @@ parameters:
     database_driver:   pdo_mysql
     database_host:     localhost
     database_port:     ~
-    database_name:     pct
-    database_user:     root
-    database_password: ~
+    database_name:     tuwih
+    database_user:     tuwih
+    database_password: chuBacca99
 
     mailer_transport:  smtp
     mailer_host:       localhost
