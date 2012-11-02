@@ -20,10 +20,14 @@ class AppKernel extends Kernel
             new JMS\DiExtraBundle\JMSDiExtraBundle($this),
             new JMS\SecurityExtraBundle\JMSSecurityExtraBundle(),
             new JMS\SerializerBundle\JMSSerializerBundle($this),
+
             new Nelmio\ApiDocBundle\NelmioApiDocBundle(),
             new FOS\UserBundle\FOSUserBundle(),
             new FOS\RestBundle\FOSRestBundle(),
             new PCT\Core\UserBundle\PCTCoreUserBundle(),
+
+            new Mopa\Bundle\WSSEAuthenticationBundle\MopaWSSEAuthenticationBundle(),
+
             new PCT\Core\HistoryBundle\PCTCoreHistoryBundle(),
             new PCT\Core\CommentBundle\PCTCoreCommentBundle(),
             new PCT\Core\ContentBundle\PCTCoreContentBundle(),
