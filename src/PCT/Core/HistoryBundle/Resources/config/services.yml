@@ -1,0 +1,7 @@
+parameters:
+#    pct_core_history.example.class: PCT\Core\HistoryBundle\Example
+
+services:
+#    pct_core_history.example:
+#        class: %pct_core_history.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]

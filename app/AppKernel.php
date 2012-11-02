@@ -25,7 +25,13 @@ class AppKernel extends Kernel
             new FOS\UserBundle\FOSUserBundle(),
             new FOS\RestBundle\FOSRestBundle(),
             new PCT\Core\UserBundle\PCTCoreUserBundle(),
+
             new Mopa\Bundle\WSSEAuthenticationBundle\MopaWSSEAuthenticationBundle(),
+
+            new PCT\Core\HistoryBundle\PCTCoreHistoryBundle(),
+            new PCT\Core\CommentBundle\PCTCoreCommentBundle(),
+            new PCT\Core\ContentBundle\PCTCoreContentBundle(),
+            new PCT\Core\GeoBundle\PCTCoreGeoBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {

@@ -1,0 +1,3 @@
+pct_core_history_homepage:
+    pattern:  /demo/{name}
+    defaults: { _controller: PCTCoreHistoryBundle:Default:index }
