@@ -31,35 +31,23 @@ security:
         fos_userbundle:
             id: fos_user.user_provider.username
 
-    firewalls:
-        # Firewalls por defecto
-        dev:
-            pattern:  ^/(_(profiler|wdt)|css|images|js)/
-            security: false
-
-        login:
-            pattern:  ^/demo/secured/login$
-            security: false
-
-        secured_area:
-            pattern:    ^/demo/secured/
-            form_login:
-                check_path: /demo/secured/login_check
-                login_path: /demo/secured/login
-            logout:
-                path:   /demo/secured/logout
-                target: /demo/
-            #anonymous: ~
-            #http_basic:
-            #    realm: "Secured Demo Area"
-        # FIN DEFECTO ---------------------------------    
+    firewalls:      
         # Firewalls para fos_user_bundle
-        main:
-            pattern: ^/
-            form_login:
-                provider: fos_userbundle
-                csrf_provider: form.csrf_provider
-            logout:       true
+#        main:
+#            pattern: ^/
+#           form_login:
+#                provider: fos_userbundle
+#                csrf_provider: form.csrf_provider
+#            logout:       true
+#            anonymous:    true
+            
+        wsse_secured:
+            pattern:   ^/api/users.*
+            stateless:    true
+            wsse:
+                nonce_dir: /tmp
+                lifetime: 6000
+                provider: in_memory
             anonymous:    true
 
     access_control:

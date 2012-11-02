@@ -104,3 +104,8 @@ sensio_framework_extra:
 
 nelmio_api_doc: 
     name: Pictcat Api Doc
+    
+mopa_wsse_authentication:
+    provider_class: Mopa\Bundle\WSSEAuthenticationBundle\Security\Authentication\Provider\WsseAuthenticationProvider
+    listener_class: Mopa\Bundle\WSSEAuthenticationBundle\Security\Firewall\WsseListener
+    factory_class: Mopa\Bundle\WSSEAuthenticationBundle\Security\Factory\WsseFactory
