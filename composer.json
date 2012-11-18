@@ -19,6 +19,8 @@
         "jms/security-extra-bundle": "1.1.*",
         "jms/di-extra-bundle": "1.0.*",
         
+        "doctrine/doctrine-fixtures-bundle": "dev-master",
+        
         "jms/serializer-bundle": "0.9.0",
         "nelmio/api-doc-bundle": "dev-master",
         "friendsofsymfony/user-bundle": "dev-master",
