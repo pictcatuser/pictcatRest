@@ -1,4 +1,4 @@
 users:
     type:     rest
-    prefix: /api
+#    prefix: /api
     resource: PCT\Core\UserBundle\Controller\UserController

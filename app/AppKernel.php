@@ -33,6 +33,7 @@ class AppKernel extends Kernel
             new PCT\Core\CommentBundle\PCTCoreCommentBundle(),
             new PCT\Core\ContentBundle\PCTCoreContentBundle(),
             new PCT\Core\GeoBundle\PCTCoreGeoBundle(),
+            new PCT\Core\SecurBundle\PCTCoreSecurBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {
