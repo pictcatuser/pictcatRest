@@ -5,7 +5,7 @@ namespace PCT\Core\UserBundle\Controller;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpKernel\Exception\HttpException;
 use Nelmio\ApiDocBundle\Annotation\ApiDoc;
-use FOS\RestBundle\View\View;
+use FOS\RestBundle\View\View AS FOSView;
 use FOS\RestBundle\Request\ParamFetcher;
 use FOS\RestBundle\Controller\Annotations\QueryParam;
 use FOS\RestBundle\Controller\Annotations\RequestParam;
@@ -49,7 +49,7 @@ class UserController extends Controller {
 
         $page = $paramFetcher->get('page');
 
-        $view = View::create();
+        $view = FOSView::create();
 
         // Array ejemplo
         if ($page==1) {$data = array("A" => $page);}

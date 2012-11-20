@@ -1,3 +1,7 @@
+pct_core_secur:
+    resource: "@PCTCoreSecurBundle/Resources/config/routing.yml"
+    prefix:   /api/wsse
+
 pct_core_geo:
     resource: "@PCTCoreGeoBundle/Resources/config/routing.yml"
     prefix:   /api/geo

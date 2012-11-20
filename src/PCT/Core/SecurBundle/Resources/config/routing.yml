@@ -1,0 +1,4 @@
+secur:
+    type:     rest
+#    prefix: /api
+    resource: PCT\Core\SecurBundle\Controller\SecurController

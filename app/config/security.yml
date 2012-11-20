@@ -42,12 +42,12 @@ security:
 #            anonymous:    true
             
         wsse_secured:
-            pattern:   ^/api/users.*
+            pattern:   ^/api/user/users.*
             stateless:    true
             wsse:
                 nonce_dir: /tmp
                 lifetime: 6000
-                provider: in_memory
+                provider: fos_userbundle
             anonymous:    true
 
     access_control:
