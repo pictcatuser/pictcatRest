@@ -21,6 +21,7 @@ class AppKernel extends Kernel
             new JMS\SecurityExtraBundle\JMSSecurityExtraBundle(),
             new JMS\SerializerBundle\JMSSerializerBundle($this),
 
+            new Doctrine\Bundle\FixturesBundle\DoctrineFixturesBundle(),
             new Nelmio\ApiDocBundle\NelmioApiDocBundle(),
             new FOS\UserBundle\FOSUserBundle(),
             new FOS\RestBundle\FOSRestBundle(),
